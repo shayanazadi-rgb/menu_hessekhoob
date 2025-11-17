@@ -1,0 +1,486 @@
+@font-face {
+    font-family: 'Vazir';
+    src: url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-FD-WOL.eot');
+    src: url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-FD-WOL.eot?#iefix') format('embedded-opentype'),
+         url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-FD-WOL.woff2') format('woff2'),
+         url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-FD-WOL.woff') format('woff'),
+         url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-FD-WOL.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Light-FD-WOL.eot');
+    src: url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Light-FD-WOL.eot?#iefix') format('embedded-opentype'),
+         url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Light-FD-WOL.woff2') format('woff2'),
+         url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Light-FD-WOL.woff') format('woff'),
+         url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Light-FD-WOL.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.eot');
+    src: url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.eot?#iefix') format('embedded-opentype'),
+         url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.woff2') format('woff2'),
+         url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.woff') format('woff'),
+         url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Medium-FD-WOL.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Bold-FD-WOL.eot');
+    src: url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Bold-FD-WOL.eot?#iefix') format('embedded-opentype'),
+         url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Bold-FD-WOL.woff2') format('woff2'),
+         url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Bold-FD-WOL.woff') format('woff'),
+         url('vazir-font-v16.1.0/Farsi-Digits-Without-Latin/Vazir-Bold-FD-WOL.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazir', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5e6d3 0%, #e8d5c4 50%, #d4c4b0 100%);
+    color: #3d2817;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fffef9;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(139, 90, 43, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(101, 67, 33, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 30px;
+    border-bottom: 3px solid #8b5a2b;
+}
+
+
+.cafe-logo {
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+    transition: transform 0.3s ease;
+}
+
+.cafe-logo:hover {
+    transform: scale(1.05);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.logo-container {
+    flex-shrink: 0;
+}
+
+.coffee-icon-container {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coffee-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.coffee-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.title-group {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-nav {
+    background: linear-gradient(145deg, #ffffff 0%, #faf8f3 100%);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8ddd0;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 12px 20px;
+    color: #6b4423;
+    text-decoration: none;
+    font-family: 'Vazir', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    background: linear-gradient(145deg, #ffffff 0%, #faf8f3 100%);
+}
+
+.nav-link:hover {
+    background: linear-gradient(145deg, #faf8f3 0%, #f5f0e8 100%);
+    color: #8b5a2b;
+    border-color: #d4a574;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link.active {
+    background: linear-gradient(135deg, #8b5a2b 0%, #6b4423 100%);
+    color: #fffef9;
+    border-color: #6b4423;
+    box-shadow: 0 3px 10px rgba(107, 68, 35, 0.3);
+    font-weight: 600;
+}
+
+.menu-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #6b4423;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Vazir', sans-serif;
+}
+
+.menu-subtitle {
+    font-size: 2rem;
+    color: #8b5a2b;
+    font-weight: 400;
+    margin-top: 10px;
+    font-family: 'Vazir', sans-serif;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-section {
+    background: linear-gradient(145deg, #ffffff 0%, #faf8f3 100%);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #e8ddd0;
+    display: none;
+}
+
+.menu-section.active {
+    display: block;
+    animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: #6b4423;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d4a574;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Vazir', sans-serif;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 12px 0;
+    border-bottom: 1px dotted #d4a574;
+    transition: padding-left 0.2s ease;
+}
+
+.menu-item:hover {
+    padding-left: 5px;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.item-name {
+    flex: 1;
+    font-size: 1rem;
+    color: #3d2817;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: 'Vazir', sans-serif;
+}
+
+.item-desc {
+    display: block;
+    font-size: 0.85rem;
+    color: #8b6f47;
+    font-weight: 300;
+    margin-top: 4px;
+    font-style: italic;
+    font-family: 'Vazir', sans-serif;
+}
+
+.item-price {
+    font-size: 1.1rem;
+    color: #8b5a2b;
+    font-weight: 500;
+    white-space: nowrap;
+    margin-left: 15px;
+    font-family: 'Vazir', sans-serif;
+}
+
+.menu-footer {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid #d4a574;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-note {
+    font-size: 0.9rem;
+    color: #000000;
+    margin: 10px 0;
+    line-height: 1.8;
+    font-family: 'Vazir', sans-serif;
+}
+
+/* Navigation Responsive */
+@media (max-width: 768px) {
+    .menu-nav {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .nav-list {
+        gap: 8px;
+    }
+
+    .nav-link {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+
+    .cafe-logo {
+        max-width: 120px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    header {
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+    }
+
+    .header-content {
+        gap: 10px;
+    }
+
+    .logo-container {
+        flex-shrink: 0;
+    }
+
+    .cafe-logo {
+        max-width: 60px;
+    }
+
+    .coffee-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .title-group {
+        gap: 2px;
+    }
+
+    .menu-title {
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+        margin-bottom: 0;
+    }
+
+    .menu-subtitle {
+        font-size: 0.9rem;
+        margin-top: 0;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .menu-section {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .item-name {
+        font-size: 0.95rem;
+    }
+
+    .item-price {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    header {
+        padding-bottom: 12px;
+        margin-bottom: 15px;
+    }
+
+    .header-content {
+        gap: 8px;
+    }
+
+    .cafe-logo {
+        max-width: 50px;
+    }
+
+    .coffee-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .title-group {
+        gap: 1px;
+    }
+
+    .menu-title {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .menu-subtitle {
+        font-size: 0.75rem;
+    }
+
+    .item-desc {
+        font-size: 0.8rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .menu-section:hover {
+        transform: none;
+    }
+}
+
