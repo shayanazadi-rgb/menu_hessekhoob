@@ -256,6 +256,16 @@ header {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
+.menu-grid.all-view {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.menu-grid.all-view .menu-section:hover {
+    transform: none;
+}
+
 .section-title {
     font-size: 1.5rem;
     color: #6b4423;
@@ -325,6 +335,52 @@ header {
     text-align: center;
     position: relative;
     z-index: 1;
+}
+
+.qr-code-section {
+    background: linear-gradient(145deg, #ffffff 0%, #faf8f3 100%);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8ddd0;
+}
+
+.qr-title {
+    font-size: 1.2rem;
+    color: #6b4423;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-family: 'Vazir', sans-serif;
+}
+
+.qrcode-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+    background: #fffef9;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.qr-code-image {
+    max-width: 200px;
+    height: auto;
+    display: block;
+}
+
+.qrcode-fallback {
+    display: none;
+}
+
+.qr-note {
+    font-size: 0.85rem;
+    color: #8b6f47;
+    margin-top: 15px;
+    font-family: 'Vazir', sans-serif;
+    word-break: break-all;
 }
 
 .footer-note {
@@ -464,6 +520,32 @@ header {
 
     .item-desc {
         font-size: 0.8rem;
+    }
+    
+    .qr-code-section {
+        padding: 20px;
+    }
+    
+    .qr-title {
+        font-size: 1rem;
+    }
+    
+    .qrcode-container {
+        padding: 15px;
+    }
+    
+    .qr-code-image {
+        max-width: 150px;
+    }
+    
+    #qrcode canvas,
+    #qrcode img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .qrcode-fallback {
+        display: none;
     }
 }
 
